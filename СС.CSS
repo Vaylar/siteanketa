@@ -1,0 +1,147 @@
+ body {
+   background: url("Img2.jpg")
+ }
+/* анкета */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    background-color: rgb(255, 255, 255);
+    
+    margin: auto;
+    text-align: center;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button { /* Кнопка инфо Обо мне */
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  #myDIV {
+    display:none;
+    width: 100%;
+    padding: 5px ;
+    text-align: center;
+    margin-top: 10px;
+}
+  button{
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  button:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 8px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  button:hover{
+    padding-right: 50px;
+    
+  }
+  
+  button:hover:after {
+    opacity: 1;
+    right: 80px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+
+  /* Шкала умений */
+* {box-sizing:border-box}
+
+.container {
+  width: 50%;
+  
+  background-color: rgb(236, 227, 227); 
+}
+.parent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 25%;
+    
+    
+}
+
+.skills {
+  text-align: right; 
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+  color: white; 
+}
+
+.html {width: 45%; background-color: #f0960f;} 
+.css {width: 35%; background-color: #2196F3;} 
+.js {width: 25%; background-color: #b0c403;} 
+
+
+
+
+/*  флипп бокс  */
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 212px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Переворот при наведении */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+/* Стили */
+.flip-box-front {
+  
+  color: black;
+}
+
+
+.flip-box-back {
+  
+  color: white;
+  transform: rotateY(180deg);
+}
